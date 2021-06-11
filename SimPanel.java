@@ -40,9 +40,8 @@ public class SimPanel extends JPanel implements ActionListener {
 
     public void paint(Graphics g) {
         Graphics2D g2 = (Graphics2D) g;
-        // System.out.println(getWidth() + ", " + getHeight());
         g2.setColor(Color.WHITE);
-        g2.drawRect(0, 0, getWidth(), getHeight());
+        g2.fillRect(0, 0, getWidth(), getHeight());
 
         g2.setColor(Color.BLACK);
         for(int r=0; r<rows; ++r) {
