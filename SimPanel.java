@@ -44,19 +44,19 @@ public class SimPanel extends JPanel implements ActionListener {
         g2.setColor(Color.WHITE);
         g2.drawRect(0, 0, getWidth(), getHeight());
 
+        g2.setColor(Color.BLACK);
+        for(int r=0; r<rows; ++r) {
+            for(int c=0; c<columns; ++c) {
+                if(board[r][c]) { g2.fillRect(c*(getWidth()/columns), r*(getHeight()/rows), (getWidth()/columns), (getHeight()/rows));}
+            }
+        }
+
         g2.setColor(Color.GRAY);
         for(int r=0; r<rows; ++r) {
             g2.drawLine(0, r*(getHeight()/rows), getWidth(), r*(getHeight()/rows));
         }
         for(int c=0; c<columns; ++c) {
             g2.drawLine(c*(getWidth()/columns), 0, c*(getWidth()/columns), getHeight());
-        }
-
-        g2.setColor(Color.BLACK);
-        for(int r=0; r<rows; ++r) {
-            for(int c=0; c<columns; ++c) {
-                if(board[r][c]) { g2.fillRect(c*(getWidth()/columns), r*(getHeight()/rows), (getWidth()/columns), (getHeight()/rows));}
-            }
         }
     }
 
