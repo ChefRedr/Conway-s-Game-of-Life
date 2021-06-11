@@ -6,7 +6,7 @@ public class Main {
         Scanner cin = new Scanner(System.in);
         int r = 0;
         int c = 0;
-        final int genTime = 250;
+        int genTime = 0;
         System.out.println("Welcome to Conway's Game of Life.");
         while(r==0) {
             try {
@@ -18,6 +18,12 @@ public class Main {
             try {
                 System.out.print("How many columns: ");
                 c = Integer.parseInt(cin.nextLine());
+            } catch(NumberFormatException e) { System.out.println("Try Again"); }
+        }
+        while(genTime==0) {
+            try {
+                System.out.print("Update time in milliseconds: ");
+                genTime = Integer.parseInt(cin.nextLine());
             } catch(NumberFormatException e) { System.out.println("Try Again"); }
         }
         cin.close();
