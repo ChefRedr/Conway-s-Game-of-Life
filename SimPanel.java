@@ -30,7 +30,7 @@ public class SimPanel extends JPanel implements ActionListener {
 
         for(int r=0; r<rows; ++r) {
             for(int c=0; c<columns; ++c) {
-                if(rand.nextInt(4) == 3) { board[r][c] = true; } 
+                if(rand.nextInt(8) == 7) { board[r][c] = true; } 
                 else { board[r][c] = false; }
             }
         }
